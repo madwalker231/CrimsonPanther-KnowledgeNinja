@@ -1,0 +1,2 @@
+# CrimsonPanther-KnowledgeNinja
+Initial Commit
