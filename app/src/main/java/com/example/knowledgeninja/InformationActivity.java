@@ -3,6 +3,9 @@ package com.example.knowledgeninja;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -18,6 +21,10 @@ import com.example.knowledgeninja.databinding.ActivityInformationBinding;
 
 public class InformationActivity extends AppCompatActivity {
 
+    Button nextButton, prevButton;
+    TextView factText, informationTitle;
+    ImageView resourceImage;
+    int factInt;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInformationBinding binding;
 
@@ -47,6 +54,50 @@ public class InformationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_information);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        factInt = 1;
+        //Find variables
+        factText = (TextView)findViewById(R.id.textViewFactText);
+        informationTitle = (TextView)findViewById(R.id.textViewInformationTitle);
+        Button nextButton = (Button) findViewById(R.id.buttonNextFact);
+        Button prevButton = (Button) findViewById(R.id.buttonPreviousFact);
+        resourceImage= (ImageView)findViewById(R.id.imageResource);
+
+        //Click listeners
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                factInt++;
+                DisplayFact(factInt);
+            }
+        });
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                factInt--;
+                DisplayFact(factInt);
+            }
+        });
+
+    }
+
+    private void DisplayFact(int factInt) {
+        if(factInt ==1){
+            factText.setTextSize(30);
+            factText.setText(R.string.earth_fact_1);
+
+        }if(factInt == 2){
+            factText.setTextSize(24);
+            factText.setText(R.string.earth_fact_2);
+
+        }if(factInt == 3){
+            factText.setTextSize(22);
+            factText.setText(R.string.earth_fact_3);
+        }if(factInt >=4){
+            factText.setText("More facts coming soon!");
+        }if(factInt <=0){
+            factText.setText("More facts coming soon!");
+        }
     }
 
     @Override
