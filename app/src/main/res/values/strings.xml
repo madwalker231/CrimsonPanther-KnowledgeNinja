@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">KnowledgeNinja</string>
+    <string name="title_activity_information">InformationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="solar_system_text">Solar System</string>
+    <string name="space_text">Space</string>
+    //Planets
+    <string name="planet_1">Mercury</string>
+    <string name="planet_2">Venus</string>
+    <string name="planet_3">Earth</string>
+    <string name="planet_4">Mars</string>
+    <string name="planet_5">Jupiter</string>
+    <string name="planet_6">Saturn</string>
+    <string name="planet_7">Uranus</string>
+    <string name="planet_8">Neptune</string>
+    <string name="earth_fact_1">The Earth is the third planet from the sun. </string>
+    <string name="earth_fact_2">The Earth is separated by distinct layers with a core, mantle and crust. Imagine Earth as a chocolate-covered cherry.</string>
+    <string name="earth_fact_3">If you stick a pencil directly through the Earth at the point of rotation, these two points are the North and South poles. Geographically speaking, it’s where lines of longitude meet.</string>
+
 </resources>

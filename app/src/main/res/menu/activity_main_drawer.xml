@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mercury"
+            android:icon="@drawable/mercury_icon"
+            android:title="@string/planet_1" />
+        <item
+            android:id="@+id/nav_venus"
+            android:icon="@drawable/venus_icon"
+            android:title="@string/planet_2" />
+        <item
+            android:id="@+id/nav_earth"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_3" />
+        <item
+            android:id="@+id/nav_mars"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_4" />
+        <item
+            android:id="@+id/nav_jupiter"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_5" />
+        <item
+            android:id="@+id/nav_saturn"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_6" />
+        <item
+            android:id="@+id/nav_uranus"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_7" />
+    </group>
+</menu>
