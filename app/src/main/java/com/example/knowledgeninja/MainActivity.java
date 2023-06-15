@@ -2,33 +2,40 @@ package com.example.knowledgeninja;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvSpace = (TextView) findViewById(R.id.textViewSpace);
+        tvSpace = (ImageView) findViewById(R.id.imageViewSpace);
 
-        tvAnimals = (TextView) findViewById(R.id.textViewAnimals);
+        tvAnimals = (ImageView) findViewById(R.id.imageViewAnimals);
 
-        tvNature = (TextView) findViewById(R.id.textViewNature);
+        tvNature = (ImageView) findViewById(R.id.imageViewNature);
 
-        tvTechnology = (TextView) findViewById(R.id.textViewNature);
+        tvTechnology = (ImageView) findViewById(R.id.imageViewTechnology);
 
-        tvHistory = (TextView) findViewById(R.id.textViewNature);
+        tvHistory = (ImageView) findViewById(R.id.imageViewHistory);
 
-        tvSpace.setClickListener(new View.OnClickListener()
+        tvSpace.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                String str = tvSpace.getText().toString();
-                Intent intent = new Intent(MainActivity.this, DataImport.class);
+                String str = "Space";
+                Intent intent = new Intent(MainActivity.this, Data.Import.class);
                 intent.putExtra("massage_key", str);
                 startActivity(intent);
             }
@@ -39,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                String str = tvAnimals.getText().toString();
+                String str = "Animals";
                 Intent intent = new Intent(MainActivity.this, Data.Import.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
@@ -51,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                String str = tvNature.getText().toString();
+                String str = "Nature";
                 Intent intent = new Intent(MainActivity.this, Data.Import.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
@@ -63,19 +70,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                String str = tvTechnology.getText().toString();
+                String str = "Technology";
                 Intent intent = new Intent(MainActivity.this, Data.Import.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
             }
         });
 
-        tvHisroty.setOnClickListener(new View.OnClickListener()
+        tvHistory.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                String str = tvHistory.getText().toString();
+                String str = "History";
                 Intent intent = new Intent(MainActivity.this, Data.Import.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);

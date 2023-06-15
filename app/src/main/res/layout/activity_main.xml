@@ -7,18 +7,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="175dp"
-        android:layout_height="165dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="84dp"
-        android:text="Button5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
-
-    <Button
         android:id="@+id/button4"
         android:layout_width="175dp"
         android:layout_height="165dp"
@@ -60,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewSpace"
         android:layout_width="141dp"
         android:layout_height="140dp"
         android:layout_marginStart="32dp"
@@ -70,7 +58,7 @@
         app:srcCompat="@drawable/space" />
 
     <TextView
-        android:id="@+id/Space"
+        android:id="@+id/textViewSpace"
         android:layout_width="43dp"
         android:layout_height="23dp"
         android:layout_marginStart="90dp"
@@ -78,12 +66,12 @@
         android:layout_marginBottom="16dp"
         android:text="Space"
         android:textColor="#8BC34A"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewSpace"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewNature"
         android:layout_width="126dp"
         android:layout_height="75dp"
         android:layout_marginTop="160dp"
@@ -93,7 +81,7 @@
         app:srcCompat="@drawable/nature" />
 
     <TextView
-        android:id="@+id/Nature"
+        android:id="@+id/textViewNature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
@@ -104,7 +92,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageViewAnimals"
         android:layout_width="113dp"
         android:layout_height="79dp"
         android:layout_marginStart="55dp"
@@ -114,7 +102,7 @@
         app:srcCompat="@drawable/animals" />
 
     <TextView
-        android:id="@+id/Animals"
+        android:id="@+id/textViewAnimals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
@@ -125,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageViewTechnology"
         android:layout_width="127dp"
         android:layout_height="80dp"
         android:layout_marginTop="336dp"
@@ -135,7 +123,7 @@
         app:srcCompat="@drawable/technology" />
 
     <TextView
-        android:id="@+id/Technology"
+        android:id="@+id/textViewTechnology"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
@@ -146,28 +134,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="122dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        android:id="@+id/imageViewHistory"
+        android:layout_width="179dp"
+        android:layout_height="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.529"
         app:srcCompat="@drawable/history" />
-
-    <TextView
-        android:id="@+id/History"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="History"
-        android:textColor="#8BC34A"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button5" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
