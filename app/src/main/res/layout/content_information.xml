@@ -27,19 +27,21 @@
         <ImageView
             android:id="@+id/imageResource"
             android:layout_width="412dp"
-            android:layout_height="392dp"
-            android:scaleType="fitStart"
+            android:layout_height="350dp"
+            android:scaleType="centerInside"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/earthtwo" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            app:cardCornerRadius="40dp"
             app:cardElevation="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,37 +70,38 @@
                     android:id="@+id/textViewFactText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
                     android:fontFamily="sans-serif-smallcaps"
                     android:gravity="center"
                     android:text="@string/earth_fact_1"
                     android:textColor="@color/black"
                     android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewInformationTitle" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/buttonNextFact"
+                <ImageView
+                    android:id="@+id/imageViewPrevious"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="48dp"
-                    android:layout_marginBottom="12dp"
-                    android:text="Next Fact"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewInformationTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewInformationTitle"
+                    app:srcCompat="@drawable/arrow_back" />
 
-                <Button
-                    android:id="@+id/buttonPreviousFact"
+                <ImageView
+                    android:id="@+id/imageViewNext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginBottom="12dp"
-                    android:text="Prev Fact"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewInformationTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewInformationTitle"
+                    app:srcCompat="@drawable/arrow_forward" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

@@ -32,5 +32,9 @@
             android:id="@+id/nav_uranus"
             android:icon="@drawable/planet_earth_icon"
             android:title="@string/planet_7" />
+        <item
+            android:id="@+id/nav_neptune"
+            android:icon="@drawable/planet_earth_icon"
+            android:title="@string/planet_8" />
     </group>
 </menu>

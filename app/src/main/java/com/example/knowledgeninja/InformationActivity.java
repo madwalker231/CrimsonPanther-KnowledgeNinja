@@ -23,7 +23,7 @@ public class InformationActivity extends AppCompatActivity {
 
     Button nextButton, prevButton;
     TextView factText, informationTitle;
-    ImageView resourceImage;
+    ImageView resourceImage, nextButton1, prevButton1;
     int factInt;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInformationBinding binding;
@@ -35,14 +35,15 @@ public class InformationActivity extends AppCompatActivity {
         binding = ActivityInformationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.appBarInformation.toolbar);
-        binding.appBarInformation.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+       // setSupportActionBar(binding.appBarInformation.toolbar);
+        //binding.appBarInformation.fab.setOnClickListener(new View.OnClickListener() {
+     //       @Override
+      //      public void onClick(View view) {
+      //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+     //                   .setAction("Action", null).show();
+     //       }
+    //    });
+      //  binding.appBarInformation.fab.hide();
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -59,44 +60,54 @@ public class InformationActivity extends AppCompatActivity {
         //Find variables
         factText = (TextView)findViewById(R.id.textViewFactText);
         informationTitle = (TextView)findViewById(R.id.textViewInformationTitle);
-        Button nextButton = (Button) findViewById(R.id.buttonNextFact);
-        Button prevButton = (Button) findViewById(R.id.buttonPreviousFact);
+
         resourceImage= (ImageView)findViewById(R.id.imageResource);
+        nextButton1 = (ImageView) findViewById(R.id.imageViewNext);
+        prevButton1 = (ImageView)findViewById(R.id.imageViewPrevious);
 
         //Click listeners
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        resourceImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        nextButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 factInt++;
                 DisplayFact(factInt);
             }
         });
-        prevButton.setOnClickListener(new View.OnClickListener() {
+        prevButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 factInt--;
                 DisplayFact(factInt);
             }
         });
-
     }
 
     private void DisplayFact(int factInt) {
         if(factInt ==1){
             factText.setTextSize(30);
             factText.setText(R.string.earth_fact_1);
-
+            resourceImage.setImageResource(R.drawable.earthtwo);
         }if(factInt == 2){
             factText.setTextSize(24);
             factText.setText(R.string.earth_fact_2);
-
+            resourceImage.setImageResource(R.drawable.earthimage1);
         }if(factInt == 3){
             factText.setTextSize(22);
             factText.setText(R.string.earth_fact_3);
+            resourceImage.setImageResource(R.drawable.earthimage2);
         }if(factInt >=4){
+            resourceImage.setImageResource(R.drawable.earthimage3);
             factText.setText("More facts coming soon!");
         }if(factInt <=0){
             factText.setText("More facts coming soon!");
+            resourceImage.setImageResource(R.drawable.earthimage4);
         }
     }
 
