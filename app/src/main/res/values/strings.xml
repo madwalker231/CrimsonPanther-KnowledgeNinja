@@ -25,5 +25,11 @@
     <string name="earth_fact_1">The Earth is the third planet from the sun. </string>
     <string name="earth_fact_2">The Earth is separated by distinct layers with a core, mantle and crust. Imagine Earth as a chocolate-covered cherry.</string>
     <string name="earth_fact_3">If you stick a pencil directly through the Earth at the point of rotation, these two points are the North and South poles. Geographically speaking, it’s where lines of longitude meet.</string>
-
+    <string name="mercury_fact_1">Mercury is the smallest planet in our solar system – only slightly larger than Earths Moon.</string>
+    <string name="venus_fact_1">Even though Mercury is closer to the Sun, Venus is the hottest planet in our solar system. </string>
+    <string name="mars_fact_1">Mars is sometimes called the Red Planet. It is red because of rusty iron in the ground.</string>
+    <string name="jupiter_fact_1">Jupiter is the biggest planet in our solar system. Jupiter is covered in swirling cloud stripe</string>
+    <string name="saturn_fact_1">Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</string>
+    <string name="uranus_fact_1">Uranus is the seventh planet from the Sun, and has the third-largest diameter in our solar system</string>
+    <string name="neptune_fact_1">It is made of a thick soup of water, ammonia, and methane over an Earth-sized solid center.</string>
 </resources>

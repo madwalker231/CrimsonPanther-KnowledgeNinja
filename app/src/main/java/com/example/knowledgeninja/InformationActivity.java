@@ -1,15 +1,19 @@
 package com.example.knowledgeninja;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -28,6 +32,7 @@ public class InformationActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInformationBinding binding;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,15 +40,15 @@ public class InformationActivity extends AppCompatActivity {
         binding = ActivityInformationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-       // setSupportActionBar(binding.appBarInformation.toolbar);
-        //binding.appBarInformation.fab.setOnClickListener(new View.OnClickListener() {
-     //       @Override
-      //      public void onClick(View view) {
-      //          Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-     //                   .setAction("Action", null).show();
-     //       }
-    //    });
-      //  binding.appBarInformation.fab.hide();
+       setSupportActionBar(binding.appBarInformation.toolbar);
+        binding.appBarInformation.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                     .setAction("Action", null).show();
+         }
+          });
+        binding.appBarInformation.fab.hide();
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -55,7 +60,73 @@ public class InformationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_information);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int itemId= item.getItemId();
+            if(itemId == R.id.nav_mercury){
+                Toast.makeText(this, "Mercury Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Mercury Facts:");
+                resourceImage.setImageResource(R.drawable.mercury);
+                factText.setText(R.string.mercury_fact_1);
+                return true;
 
+            }else if(itemId == R.id.nav_venus){
+                Toast.makeText(this, "Venus Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Venus Facts:");
+                resourceImage.setImageResource(R.drawable.venus);
+                factText.setText(R.string.venus_fact_1);
+                return true;
+            }else if(itemId == R.id.nav_earth){
+                Toast.makeText(this, "Earth Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Earth Facts:");
+                resourceImage.setImageResource(R.drawable.earthtwo);
+                factText.setText(R.string.earth_fact_1);
+                return true;
+            }
+            else if(itemId == R.id.nav_mars){
+                Toast.makeText(this, "Mars Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Mars Facts:");
+                resourceImage.setImageResource(R.drawable.mars);
+                factText.setText(R.string.mars_fact_1);
+                return true;
+            }
+            else if(itemId == R.id.nav_jupiter){
+                Toast.makeText(this, "Jupiter Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Jupiter Facts:");
+                resourceImage.setImageResource(R.drawable.jupiter);
+                factText.setText(R.string.jupiter_fact_1);
+                return true;
+            }
+            else if(itemId == R.id.nav_saturn){
+                Toast.makeText(this, "Saturn Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Saturn Facts:");
+                resourceImage.setImageResource(R.drawable.saturn);
+                factText.setText(R.string.saturn_fact_1);
+                return true;
+            }
+            else if(itemId == R.id.nav_uranus){
+                Toast.makeText(this, "Uranus Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Uranus Facts:");
+                resourceImage.setImageResource(R.drawable.uranus);
+                factText.setText(R.string.uranus_fact_1);
+                return true;
+            }
+            else if(itemId == R.id.nav_neptune){
+                Toast.makeText(this, "Neptune Chosen", Toast.LENGTH_SHORT).show();
+                drawer.closeDrawer(GravityCompat.START);
+                informationTitle.setText("Neptune Facts:");
+                resourceImage.setImageResource(R.drawable.neptune);
+                factText.setText(R.string.neptune_fact_1);
+                return true;
+            }
+            return false;
+        });
         factInt = 1;
         //Find variables
         factText = (TextView)findViewById(R.id.textViewFactText);
@@ -124,4 +195,5 @@ public class InformationActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+    
 }
