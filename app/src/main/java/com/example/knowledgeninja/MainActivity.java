@@ -7,12 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory;
+    ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory, tvNavBarMenu;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,64 +28,65 @@ public class MainActivity extends AppCompatActivity {
 
         tvHistory = (ImageView) findViewById(R.id.imageViewHistory);
 
-        tvSpace.setOnClickListener(new View.OnClickListener()
+        tvSpace.setOnClickListener(view ->
         {
-            @Override
-            public void onClick(View view)
-            {
-                String str = "Space";
-                Intent intent = new Intent(MainActivity.this, Data.class);
-                intent.putExtra("massage_key", str);
-                startActivity(intent);
-            }
+            String str = getString(R.string.space_title);
+            Intent intent = new Intent(MainActivity.this, Data.class);
+            intent.putExtra("massage_key", str);
+            startActivity(intent);
         });
 
-        tvAnimals.setOnClickListener(new View.OnClickListener()
+        tvAnimals.setOnClickListener(view ->
         {
-            @Override
-            public void onClick(View view)
-            {
-                String str = "Animals";
-                Intent intent = new Intent(MainActivity.this, Data.class);
-                intent.putExtra("message_key", str);
-                startActivity(intent);
-            }
+            String str = "Animals";
+            Intent intent = new Intent(MainActivity.this, Data.class);
+            intent.putExtra("message_key", str);
+            startActivity(intent);
         });
 
-        tvNature.setOnClickListener(new View.OnClickListener()
+        tvNature.setOnClickListener(view ->
         {
-            @Override
-            public void onClick(View view)
-            {
-                String str = "Nature";
-                Intent intent = new Intent(MainActivity.this, Data.class);
-                intent.putExtra("message_key", str);
-                startActivity(intent);
-            }
+            String str = "Nature";
+            Intent intent = new Intent(MainActivity.this, Data.class);
+            intent.putExtra("message_key", str);
+            startActivity(intent);
         });
 
-        tvTechnology.setOnClickListener(new View.OnClickListener()
+        tvTechnology.setOnClickListener(view ->
         {
-            @Override
-            public void onClick(View view)
-            {
-                String str = "Technology";
-                Intent intent = new Intent(MainActivity.this, Data.class);
-                intent.putExtra("message_key", str);
-                startActivity(intent);
-            }
+            String str = "Technology";
+            Intent intent = new Intent(MainActivity.this, Data.class);
+            intent.putExtra("message_key", str);
+            startActivity(intent);
         });
 
-        tvHistory.setOnClickListener(new View.OnClickListener()
+        tvHistory.setOnClickListener(view ->
         {
-            @Override
-            public void onClick(View view)
-            {
-                String str = "History";
-                Intent intent = new Intent(MainActivity.this, Data.class);
-                intent.putExtra("message_key", str);
-                startActivity(intent);
-            }
+            String str = "History";
+            Intent intent = new Intent(MainActivity.this, Data.class);
+            intent.putExtra("message_key", str);
+            startActivity(intent);
         });
+    }
+    private void showPopupMenu(View view)
+    {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.inflate(R.menu.menu_popup);
+
+        popupMenu.setOnMenuItemClickListener(item ->
+        {
+           int itemId = item.getItemId();
+           switch (itemId)
+           {
+               case R.id.menu_item1:
+                   return true;
+               case R.id.menu_item2:
+                   return true;
+               case R.id.menu_item3:
+                   return true;
+           }
+           return false;
+        });
+        popupMenu.show();
     }
 }
