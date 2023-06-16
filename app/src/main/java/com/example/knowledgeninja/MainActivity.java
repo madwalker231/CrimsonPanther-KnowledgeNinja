@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String str = "Space";
-                Intent intent = new Intent(MainActivity.this, Data.Import.class);
+                Intent intent = new Intent(MainActivity.this, Data.class);
                 intent.putExtra("massage_key", str);
                 startActivity(intent);
             }
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String str = "Animals";
-                Intent intent = new Intent(MainActivity.this, Data.Import.class);
+                Intent intent = new Intent(MainActivity.this, Data.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
             }
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String str = "Nature";
-                Intent intent = new Intent(MainActivity.this, Data.Import.class);
+                Intent intent = new Intent(MainActivity.this, Data.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
             }
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String str = "Technology";
-                Intent intent = new Intent(MainActivity.this, Data.Import.class);
+                Intent intent = new Intent(MainActivity.this, Data.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
             }
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view)
             {
                 String str = "History";
-                Intent intent = new Intent(MainActivity.this, Data.Import.class);
+                Intent intent = new Intent(MainActivity.this, Data.class);
                 intent.putExtra("message_key", str);
                 startActivity(intent);
             }
