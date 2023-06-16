@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/imageViewSpace"
@@ -12,9 +13,12 @@
         android:layout_height="140dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNature"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSpace"
-        app:srcCompat="@drawable/space" />
+        app:srcCompat="@drawable/space"
+        android:contentDescription="@string/content_description_space" />
 
     <TextView
         android:id="@+id/textViewSpace"
@@ -22,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="80dp"
-        android:text="Space"
+        android:text="@string/space_title"
         android:textColor="#8BC34A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +39,8 @@
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNature"
-        app:srcCompat="@drawable/nature" />
+        app:srcCompat="@drawable/nature"
+        android:contentDescription="@string/content_description_nature" />
 
     <TextView
         android:id="@+id/textViewNature"
@@ -43,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="80dp"
-        android:text="Nature"
+        android:text="@string/nature_title"
         android:textColor="#8BC34A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -54,9 +59,12 @@
         android:layout_height="116dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewTechnology"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAnimals"
-        app:srcCompat="@drawable/animals" />
+        app:srcCompat="@drawable/animals"
+        android:contentDescription="@string/content_description_animals" />
 
     <TextView
         android:id="@+id/textViewAnimals"
@@ -64,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
-        android:text="Animals"
+        android:text="@string/animals_title"
         android:textColor="#8BC34A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewSpace" />
@@ -77,7 +85,8 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTechnology"
-        app:srcCompat="@drawable/technology" />
+        app:srcCompat="@drawable/technology"
+        android:contentDescription="@string/content_description_technology"/>
 
     <TextView
         android:id="@+id/textViewTechnology"
@@ -85,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="80dp"
-        android:text="Technology"
+        android:text="@string/technology_title"
         android:textColor="#8BC34A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewNature" />
@@ -96,14 +105,17 @@
         android:layout_height="128dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHistory"
-        app:srcCompat="@drawable/history" />
+        app:srcCompat="@drawable/history"
+        android:contentDescription="@string/content_description_history"/>
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
-        android:layout_width="412dp"
-        android:layout_height="65dp"
+        android:layout_width="417dp"
+        android:layout_height="61dp"
         android:layout_marginBottom="670dp"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
@@ -121,25 +133,13 @@
         android:layout_marginStart="260dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Knowledge Ninja"
+        android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#8BC34A"
+        android:contentDescription= "@string/app_name_description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="98dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#009688"
-        android:text="Button6PopMenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/materialToolbar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -154,7 +154,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ninja" />
+        app:srcCompat="@drawable/ninja"
+        android:contentDescription="@string/content_description_ninja" />
 
     <TextView
         android:id="@+id/textViewHistory"
@@ -162,8 +163,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
-        android:text="History"
+        android:text="@string/history_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals"
+        android:textColor="#8BC34A" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

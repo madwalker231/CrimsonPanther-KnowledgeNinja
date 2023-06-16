@@ -23,26 +23,26 @@ public class Data extends AppCompatActivity
         Intent intent = getIntent();
         String str = intent.getStringExtra("message_key");
         testPage.setText(str);
-        //Toast.makeText(this, "User Selected: " + str, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "User Selected: " + str, Toast.LENGTH_LONG).show();
         if ("Space".equals(str))
         {
-            testPage.setText("Test Page - Space");
+            testPage.setText(R.string.test_page_space);
         }
         if ("Animals".equals(str))
         {
-            testPage.setText("Test Page - Animals");
+            testPage.setText(R.string.test_page_animals);
         }
         if ("Nature".equals(str))
         {
-            testPage.setText("Test Page - Nature");
+            testPage.setText(R.string.test_page_nature);
         }
         if ("Technology".equals(str))
         {
-            testPage.setText("Test Page - Technology");
+            testPage.setText(R.string.test_page_technology);
         }
         if ("History".equals(str))
         {
-            testPage.setText("Test Page - History");
+            testPage.setText(R.string.test_page_history);
         }
     }
 }

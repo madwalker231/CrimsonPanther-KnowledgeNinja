@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">KnowledgeNinja</string>
+    <string name = "content_description_space">Image of outer space</string>
+    <string name = "space_title">Space</string>
+    <string name = "content_description_nature">Image of trees</string>
+    <string name = "nature_title">Nature</string>
+    <string name = "content_description_animals">Animals</string>
+    <string name = "animals_title">Animals</string>
+    <string name = "content_description_technology">Technology</string>
+    <string name = "technology_title">Technology</string>
+    <string name = "content_description_history">History</string>
+    <string name = "history_title">History</string>
+    <string name = "content_description_ninja">Ninja</string>
+    <string name = "app_name_description">Knowledge Ninja</string>
+    <string name = "test_page_title">Test Page</string>
+    <string name = "content_description_test_image">imageView</string>
+    <string name = "test_page_space">Test Page - Space</string>
+    <string name = "test_page_animals">Test Page - Animals</string>
+    <string name = "test_page_nature">Test Page - Nature</string>
+    <string name = "test_page_technology">Test Page - Technology</string>
+    <string name = "test_page_history">Test Page - History</string>
+    <string name = "content_description_nav_menu">NavBar Menu</string>
+    <string name = "test_page_nav_menu">Test Page - Menu</string>
 </resources>
