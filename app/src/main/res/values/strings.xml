@@ -21,4 +21,7 @@
     <string name = "test_page_history">Test Page - History</string>
     <string name = "content_description_nav_menu">NavBar Menu</string>
     <string name = "test_page_nav_menu">Test Page - Menu</string>
+    <string name = "menu_setting">Settings</string>
+    <string name = "menu_profile">Profile</string>
+    <string name = "menu_parent">Parent Portal</string>
 </resources>

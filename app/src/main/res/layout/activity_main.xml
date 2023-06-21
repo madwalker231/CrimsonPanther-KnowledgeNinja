@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageViewSpace"
@@ -13,12 +13,12 @@
         android:layout_height="140dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/content_description_space"
         app:layout_constraintEnd_toStartOf="@+id/imageViewNature"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSpace"
-        app:srcCompat="@drawable/space"
-        android:contentDescription="@string/content_description_space" />
+        app:srcCompat="@drawable/space" />
 
     <TextView
         android:id="@+id/textViewSpace"
@@ -37,10 +37,10 @@
         android:layout_height="133dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:contentDescription="@string/content_description_nature"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNature"
-        app:srcCompat="@drawable/nature"
-        android:contentDescription="@string/content_description_nature" />
+        app:srcCompat="@drawable/nature" />
 
     <TextView
         android:id="@+id/textViewNature"
@@ -59,12 +59,12 @@
         android:layout_height="116dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/content_description_animals"
         app:layout_constraintEnd_toStartOf="@+id/imageViewTechnology"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAnimals"
-        app:srcCompat="@drawable/animals"
-        android:contentDescription="@string/content_description_animals" />
+        app:srcCompat="@drawable/animals" />
 
     <TextView
         android:id="@+id/textViewAnimals"
@@ -83,10 +83,10 @@
         android:layout_height="132dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="40dp"
+        android:contentDescription="@string/content_description_technology"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTechnology"
-        app:srcCompat="@drawable/technology"
-        android:contentDescription="@string/content_description_technology"/>
+        app:srcCompat="@drawable/technology" />
 
     <TextView
         android:id="@+id/textViewTechnology"
@@ -105,57 +105,12 @@
         android:layout_height="128dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
+        android:contentDescription="@string/content_description_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHistory"
-        app:srcCompat="@drawable/history"
-        android:contentDescription="@string/content_description_history"/>
-
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
-        android:layout_width="417dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="670dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/KnowledgeNinja"
-        android:layout_width="111dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#8BC34A"
-        android:contentDescription= "@string/app_name_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/materialToolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="65dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ninja"
-        android:contentDescription="@string/content_description_ninja" />
+        app:srcCompat="@drawable/history" />
 
     <TextView
         android:id="@+id/textViewHistory"
@@ -164,8 +119,60 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="32dp"
         android:text="@string/history_title"
+        android:textColor="#8BC34A"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals"
-        android:textColor="#8BC34A" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="58dp"
+        android:layout_height="53dp"
+        android:src="@drawable/navbar_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+    <TextView
+        android:id="@+id/KnowledgeNinja"
+        android:layout_width="111dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_name_description"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="#8BC34A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="65dp"
+        android:layout_height="47dp"
+        android:contentDescription="@string/content_description_ninja"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/ninja" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
