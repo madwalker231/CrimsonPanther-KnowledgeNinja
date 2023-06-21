@@ -5,16 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
-
-
-    ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory, tvNavBarMenu;
+public class MainActivity extends AppCompatActivity
+{
+    ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory;
     @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -68,25 +69,26 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-    private void showPopupMenu(View view)
+    public boolean onCreateOptionsMenu(Menu menu)
     {
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        popupMenu.inflate(R.menu.menu_popup);
-
-        popupMenu.setOnMenuItemClickListener(item ->
+        getMenuInflater().inflate(R.menu.popout_menu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int id = item.getItemId();
+        if (id == R.id.action_setting)
         {
-           int itemId = item.getItemId();
-           switch (itemId)
-           {
-               case R.id.menu_item1:
-                   return true;
-               case R.id.menu_item2:
-                   return true;
-               case R.id.menu_item3:
-                   return true;
-           }
-           return false;
-        });
-        popupMenu.show();
+            return true;
+        }
+        else if (id == R.id.action_profile)
+        {
+            return true;
+        }
+        else if (id == R.id.action_parent)
+        {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
