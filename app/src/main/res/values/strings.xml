@@ -25,5 +25,7 @@
     <string name="earth_fact_1">The Earth is the third planet from the sun. </string>
     <string name="earth_fact_2">The Earth is separated by distinct layers with a core, mantle and crust. Imagine Earth as a chocolate-covered cherry.</string>
     <string name="earth_fact_3">If you stick a pencil directly through the Earth at the point of rotation, these two points are the North and South poles. Geographically speaking, it’s where lines of longitude meet.</string>
+    <string name="home">Home</string>
+  <string name="quiz">Quiz</string>
 
 </resources>
