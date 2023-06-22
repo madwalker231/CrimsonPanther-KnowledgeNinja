@@ -20,64 +20,64 @@
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ImageView
-        android:id="@+id/imageViewSolarSystem"
+        android:id="@+id/imageView1"
         android:layout_width="141dp"
         android:layout_height="131dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/solar_system" />
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
-        android:id="@+id/imageViewSpaceTech"
+        android:id="@+id/imageView2"
         android:layout_width="141dp"
         android:layout_height="131dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/space_technology" />
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
-        android:id="@+id/imageViewComet"
+        android:id="@+id/imageView3"
         android:layout_width="141dp"
         android:layout_height="131dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSolarSystem"
-        app:srcCompat="@drawable/comet" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView1"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textViewSolarSystem"
+        android:id="@+id/textViewA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
         android:layout_marginTop="70dp"
-        android:text="Solar System"
+        android:text="Text 1"
         android:textColor = "#8BC34A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewComet"
+        android:id="@+id/textViewC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="50dp"
-        android:text="Comet"
-        android:textColor = "#8BC34A"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
+        android:text="Text 2"
+        android:textColor="#8BC34A"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSolarSystem" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
 
     <TextView
-        android:id="@+id/textViewSpaceTech"
+        android:id="@+id/textViewB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="45dp"
-        android:text="Space Technology"
+        android:text="Text 3"
         android:textColor = "#8BC34A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

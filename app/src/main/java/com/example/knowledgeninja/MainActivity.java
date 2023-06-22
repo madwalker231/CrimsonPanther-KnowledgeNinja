@@ -12,28 +12,24 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity
 {
     ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvSpace = (ImageView) findViewById(R.id.imageViewSpace);
-
-        tvAnimals = (ImageView) findViewById(R.id.imageViewAnimals);
-
-        tvNature = (ImageView) findViewById(R.id.imageViewNature);
-
-        tvTechnology = (ImageView) findViewById(R.id.imageViewTechnology);
-
-        tvHistory = (ImageView) findViewById(R.id.imageViewHistory);
+        tvSpace = findViewById(R.id.imageViewSpace);
+        tvAnimals = findViewById(R.id.imageViewAnimals);
+        tvNature = findViewById(R.id.imageViewNature);
+        tvTechnology = findViewById(R.id.imageViewTechnology);
+        tvHistory = findViewById(R.id.imageViewHistory);
 
         tvSpace.setOnClickListener(view ->
         {
             String str = getString(R.string.space_title);
             Intent intent = new Intent(MainActivity.this, Data.class);
-            intent.putExtra("massage_key", str);
+            intent.putExtra("message_key", str);
             startActivity(intent);
         });
 
