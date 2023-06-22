@@ -17,4 +17,5 @@
         android:title="@string/quiz"
         app:showAsAction="never"
         />
+  <group />
 </menu>
