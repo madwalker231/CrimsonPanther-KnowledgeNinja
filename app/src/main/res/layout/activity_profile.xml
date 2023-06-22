@@ -93,15 +93,6 @@
     tools:layout_editor_absoluteX="94dp"
     tools:layout_editor_absoluteY="94dp" />
 
-  <TextView
-    android:id="@+id/textView10"
-    android:layout_width="121dp"
-    android:layout_height="34dp"
-    android:text="Last Name"
-    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    tools:layout_editor_absoluteX="161dp"
-    tools:layout_editor_absoluteY="246dp" />
-
   <Button
     android:id="@+id/button8"
     style="@style/Widget.AppCompat.Button"
@@ -112,97 +103,79 @@
     android:textSize="10sp"
     android:textStyle="italic"
     tools:layout_editor_absoluteX="16dp"
-    tools:layout_editor_absoluteY="313dp" />
+    tools:layout_editor_absoluteY="304dp" />
 
   <ImageView
     android:id="@+id/imageView2"
     android:layout_width="136dp"
     android:layout_height="129dp"
     tools:layout_editor_absoluteX="16dp"
-    tools:layout_editor_absoluteY="175dp"
+    tools:layout_editor_absoluteY="169dp"
     tools:srcCompat="@tools:sample/avatars" />
-
-  <TextView
-    android:id="@+id/textView12"
-    android:layout_width="121dp"
-    android:layout_height="34dp"
-    android:text="Email"
-    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    tools:layout_editor_absoluteX="161dp"
-    tools:layout_editor_absoluteY="318dp" />
-
-  <Button
-    android:id="@+id/button"
-    style="@style/Widget.AppCompat.Button"
-    android:layout_width="74dp"
-    android:layout_height="36dp"
-    android:text="edit"
-    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-    android:textStyle="italic"
-    tools:layout_editor_absoluteX="303dp"
-    tools:layout_editor_absoluteY="212dp" />
-
-  <Button
-    android:id="@+id/button2"
-    style="@style/Widget.AppCompat.Button"
-    android:layout_width="74dp"
-    android:layout_height="36dp"
-    android:text="edit"
-    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-    android:textStyle="italic"
-    tools:layout_editor_absoluteX="303dp"
-    tools:layout_editor_absoluteY="246dp" />
-
-  <TextView
-    android:id="@+id/textView11"
-    android:layout_width="121dp"
-    android:layout_height="34dp"
-    android:text="User Name"
-    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    tools:layout_editor_absoluteX="161dp"
-    tools:layout_editor_absoluteY="178dp" />
-
-  <Button
-    android:id="@+id/button3"
-    style="@style/Widget.AppCompat.Button"
-    android:layout_width="74dp"
-    android:layout_height="36dp"
-    android:text="edit"
-    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-    android:textStyle="italic"
-    tools:layout_editor_absoluteX="303dp"
-    tools:layout_editor_absoluteY="282dp" />
-
-  <Button
-    android:id="@+id/button4"
-    style="@style/Widget.AppCompat.Button"
-    android:layout_width="74dp"
-    android:layout_height="36dp"
-    android:text="edit"
-    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-    android:textStyle="italic"
-    tools:layout_editor_absoluteX="303dp"
-    tools:layout_editor_absoluteY="178dp" />
-
-  <TextView
-    android:id="@+id/textView4"
-    android:layout_width="121dp"
-    android:layout_height="34dp"
-    android:text="Birthdate"
-    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    tools:layout_editor_absoluteX="161dp"
-    tools:layout_editor_absoluteY="282dp" />
 
   <Button
     android:id="@+id/button7"
-    style="@style/Widget.AppCompat.Button"
+    style="@style/Widget.AppCompat.Button.Small"
     android:layout_width="74dp"
     android:layout_height="36dp"
     android:text="edit"
     android:textAppearance="@style/TextAppearance.AppCompat.Small"
     android:textStyle="italic"
     tools:layout_editor_absoluteX="303dp"
-    tools:layout_editor_absoluteY="313dp" />
+    tools:layout_editor_absoluteY="298dp" />
+
+  <Button
+    android:id="@+id/button4"
+    style="@style/Widget.AppCompat.Button.Small"
+    android:layout_width="74dp"
+    android:layout_height="36dp"
+    android:text="edit"
+    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+    android:textStyle="italic"
+    tools:layout_editor_absoluteX="303dp"
+    tools:layout_editor_absoluteY="163dp" />
+
+  <Button
+    android:id="@+id/button3"
+    style="@style/Widget.AppCompat.Button.Small"
+    android:layout_width="74dp"
+    android:layout_height="36dp"
+    android:text="edit"
+    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+    android:textStyle="italic"
+    tools:layout_editor_absoluteX="303dp"
+    tools:layout_editor_absoluteY="267dp" />
+
+  <Button
+    android:id="@+id/button2"
+    style="@style/Widget.AppCompat.Button.Small"
+    android:layout_width="74dp"
+    android:layout_height="36dp"
+    android:text="edit"
+    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+    android:textStyle="italic"
+    tools:layout_editor_absoluteX="303dp"
+    tools:layout_editor_absoluteY="231dp" />
+
+  <Button
+    android:id="@+id/button"
+    style="@style/Widget.AppCompat.Button.Small"
+    android:layout_width="74dp"
+    android:layout_height="36dp"
+    android:text="edit"
+    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+    android:textStyle="italic"
+    tools:layout_editor_absoluteX="303dp"
+    tools:layout_editor_absoluteY="197dp" />
+
+  <TextView
+    android:id="@+id/textView10"
+    android:layout_width="121dp"
+    android:layout_height="34dp"
+    android:text="Last Name"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    tools:layout_editor_absoluteX="168dp"
+    tools:layout_editor_absoluteY="237dp" />
 
   <TextView
     android:id="@+id/textView6"
@@ -210,7 +183,34 @@
     android:layout_height="34dp"
     android:text="First Name"
     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-    tools:layout_editor_absoluteX="161dp"
-    tools:layout_editor_absoluteY="212dp" />
+    tools:layout_editor_absoluteX="168dp"
+    tools:layout_editor_absoluteY="203dp" />
+
+  <TextView
+    android:id="@+id/textView11"
+    android:layout_width="121dp"
+    android:layout_height="34dp"
+    android:text="User Name"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    tools:layout_editor_absoluteX="168dp"
+    tools:layout_editor_absoluteY="169dp" />
+
+  <TextView
+    android:id="@+id/textView4"
+    android:layout_width="121dp"
+    android:layout_height="34dp"
+    android:text="Birthdate"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    tools:layout_editor_absoluteX="168dp"
+    tools:layout_editor_absoluteY="273dp" />
+
+  <TextView
+    android:id="@+id/textView12"
+    android:layout_width="121dp"
+    android:layout_height="34dp"
+    android:text="Email"
+    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    tools:layout_editor_absoluteX="168dp"
+    tools:layout_editor_absoluteY="309dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
