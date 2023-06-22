@@ -63,6 +63,7 @@ public class FactAdapter extends RecyclerView.Adapter<FactAdapter.FactViewHolder
         TextView subTopicFact;
         TextView factName;
         ImageView actionButton;
+
         public FactViewHolder(@NonNull View itemView) {
             super(itemView);
 

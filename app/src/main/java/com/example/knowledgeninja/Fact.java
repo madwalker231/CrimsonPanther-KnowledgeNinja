@@ -1,7 +1,5 @@
 package com.example.knowledgeninja;
 
-import android.widget.ImageView;
-
 public class Fact {
 
     public String getTopic() {
@@ -39,12 +37,24 @@ public class Fact {
     private String topic;
     private String subTopic;
     private String factName;
+
+    private int factFact;
     private int factImage;
 
-    public Fact(String topic, String subTopic, String factName, int factImage) {
+
+    public int getFactFact() {
+        return factFact;
+    }
+
+    public void setFactFact(int factFact) {
+        this.factFact = factFact;
+    }
+
+    public Fact(String topic, String subTopic, String factName, int factImage, int factFact) {
         this.topic = topic;
         this.subTopic = subTopic;
         this.factName = factName;
         this.factImage = factImage;
+        this.factFact = factFact;
     }
 }

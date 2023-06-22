@@ -32,4 +32,12 @@
     <string name="saturn_fact_1">Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.</string>
     <string name="uranus_fact_1">Uranus is the seventh planet from the Sun, and has the third-largest diameter in our solar system</string>
     <string name="neptune_fact_1">It is made of a thick soup of water, ammonia, and methane over an Earth-sized solid center.</string>
+
+
+    <string name="lion_fact_1">Lions are the only social big cats and live in groups called prides. A pride can consist of up to 30 lions.</string>
+    <string name="elephant_fact_1">Elephants are the largest land animals, with males weighing up to 6 tons. They have a highly developed social structure and display complex behaviors.</string>
+    <string name="cheetah_fact_1">Cheetahs are the fastest land animals, capable of reaching speeds up to 70 mph (112 km/h) in short bursts to catch their prey.</string>
+    <string name="dolphin_fact_1">Dolphins are highly intelligent marine mammals known for their playful behavior. They use echolocation to navigate and find food.</string>
+    <string name="bald_eagle_fact_1">The bald eagle is a majestic bird of prey and a symbol of the United States. It has a wingspan of up to 7 feet (2.1 meters) and builds the largest nests of any bird species.</string>
+
 </resources>

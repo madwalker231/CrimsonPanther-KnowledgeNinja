@@ -1,6 +1,7 @@
 package com.example.knowledgeninja;
 
 import android.annotation.SuppressLint;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -27,7 +28,7 @@ public class InformationActivity extends AppCompatActivity {
 
     Button nextButton, prevButton;
     TextView factText, informationTitle;
-    ImageView resourceImage, nextButton1, prevButton1;
+    ImageView resourceImage, nextButton1, prevButton1, playSound;
     int factInt;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInformationBinding binding;
@@ -83,6 +84,7 @@ public class InformationActivity extends AppCompatActivity {
                 informationTitle.setText("Earth Facts:");
                 resourceImage.setImageResource(R.drawable.earthtwo);
                 factText.setText(R.string.earth_fact_1);
+          
                 return true;
             }
             else if(itemId == R.id.nav_mars){
@@ -131,11 +133,51 @@ public class InformationActivity extends AppCompatActivity {
         //Find variables
         factText = (TextView)findViewById(R.id.textViewFactText);
         informationTitle = (TextView)findViewById(R.id.textViewInformationTitle);
-
+        playSound= (ImageView) findViewById(R.id.imageViewPlaySound);
         resourceImage= (ImageView)findViewById(R.id.imageResource);
         nextButton1 = (ImageView) findViewById(R.id.imageViewNext);
         prevButton1 = (ImageView)findViewById(R.id.imageViewPrevious);
 
+
+        playSound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(informationTitle.getText().toString().equals("Earth Facts:")) {
+                    Toast.makeText(InformationActivity.this,"EarthSelected",Toast.LENGTH_LONG).show();
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.earthfact1);
+                    sound.start();
+                    Toast.makeText(InformationActivity.this,"Finished playing",Toast.LENGTH_LONG).show();
+                } else if (informationTitle.getText().toString() == "Mercury Facts:") {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.mercuryfact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Venus Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.venusfact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Mars Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.marsfact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Jupiter Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.jupiterfact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Uranus Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.uranusfact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Neptune Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.neptunefact1);
+                    sound.start();
+                }
+                else if (informationTitle.getText().toString().equals("Saturn Facts:")) {
+                    MediaPlayer sound = MediaPlayer.create(InformationActivity.this, R.raw.saturnfact1);
+                    sound.start();
+                }
+            }
+
+        });
         //Click listeners
         resourceImage.setOnClickListener(new View.OnClickListener() {
             @Override
