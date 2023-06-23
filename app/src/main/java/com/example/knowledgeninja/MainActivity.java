@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity
 
         tvSpace.setOnClickListener(view ->
         {
-            String str = getString(R.string.space_title);
+            String str = "Space";
             Intent intent = new Intent(MainActivity.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
