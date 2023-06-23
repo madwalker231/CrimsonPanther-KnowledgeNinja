@@ -1,178 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageViewSpace"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/content_description_space"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewNature"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSpace"
-        app:srcCompat="@drawable/space" />
-
-    <TextView
-        android:id="@+id/textViewSpace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/space_title"
-        android:textColor="#8BC34A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewNature"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="@string/content_description_nature"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNature"
-        app:srcCompat="@drawable/nature" />
-
-    <TextView
-        android:id="@+id/textViewNature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/nature_title"
-        android:textColor="#8BC34A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewAnimals"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/content_description_animals"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewTechnology"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAnimals"
-        app:srcCompat="@drawable/animals" />
-
-    <TextView
-        android:id="@+id/textViewAnimals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/animals_title"
-        android:textColor="#8BC34A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewSpace" />
-
-    <ImageView
-        android:id="@+id/imageViewTechnology"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="40dp"
-        android:contentDescription="@string/content_description_technology"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTechnology"
-        app:srcCompat="@drawable/technology" />
-
-    <TextView
-        android:id="@+id/textViewTechnology"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/technology_title"
-        android:textColor="#8BC34A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewNature" />
-
-    <ImageView
-        android:id="@+id/imageViewHistory"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/content_description_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHistory"
-        app:srcCompat="@drawable/history" />
-
-    <TextView
-        android:id="@+id/textViewHistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/history_title"
-        android:textColor="#8BC34A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="58dp"
-        android:layout_height="53dp"
-        android:src="@drawable/navbar_menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="58dp"
+            android:layout_height="53dp"
+            android:contentDescription="@string/content_description_nav_menu"
+            android:src="@drawable/navbar_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/KnowledgeNinja"
+            android:layout_width="111dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name_description"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/KnowledgeNinja"
-        android:layout_width="111dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/app_name_description"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="#8BC34A"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="65dp"
+            android:layout_height="47dp"
+            android:contentDescription="@string/content_description_ninja"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar"
+            app:srcCompat="@drawable/ninja" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="65dp"
-        android:layout_height="47dp"
-        android:contentDescription="@string/content_description_ninja"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar"
-        app:srcCompat="@drawable/ninja" />
+        <ImageView
+            android:id="@+id/imageViewSpace"
+            android:layout_width="311dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/content_description_space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:srcCompat="@drawable/space_tile" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageViewNature"
+            android:layout_width="311dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/content_description_nature"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewSpace"
+            app:srcCompat="@drawable/nature_tile" />
+
+        <ImageView
+            android:id="@+id/imageViewAnimals"
+            android:layout_width="311dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/content_description_animals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewNature"
+            app:srcCompat="@drawable/animals_tile" />
+
+        <ImageView
+            android:id="@+id/imageViewTechnology"
+            android:layout_width="311dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/content_description_technology"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAnimals"
+            app:srcCompat="@drawable/technology_tile" />
+
+        <ImageView
+            android:id="@+id/imageViewHistory"
+            android:layout_width="311dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewTechnology"
+            app:srcCompat="@drawable/history_tile"
+            android:contentDescription = "@string/content_description_history"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
