@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class FactsList  extends AppCompatActivity {
 
     List<Fact> factList;
     EditText editTextSearch;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextSearch = findViewById(R.id.editTextSearch);
         imageViewSearch = findViewById(R.id.imageViewSearch);
-        Button informationButton = findViewById(R.id.buttonInformationPage);
+        informationButton = findViewById(R.id.buttonInformationPage);
 
         imageViewSearch.setOnClickListener(view -> {
             String query = editTextSearch.getText().toString();
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         informationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, InformationActivity.class));
+                startActivity(new Intent(FactsList.this, InformationActivity.class));
             }
         });
     }
