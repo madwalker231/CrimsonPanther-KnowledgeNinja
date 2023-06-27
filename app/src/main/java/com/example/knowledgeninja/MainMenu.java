@@ -2,14 +2,13 @@ package com.example.knowledgeninja;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity
+public class MainMenu extends AppCompatActivity
 {
     ImageView tvSpace, tvAnimals, tvNature, tvTechnology, tvHistory;
 
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_menu);
 
         tvSpace = findViewById(R.id.imageViewSpace);
         tvAnimals = findViewById(R.id.imageViewAnimals);
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity
         tvSpace.setOnClickListener(view ->
         {
             String str = "Space";
-            Intent intent = new Intent(MainActivity.this, Data.class);
+            Intent intent = new Intent(MainMenu.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
         });
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         tvAnimals.setOnClickListener(view ->
         {
             String str = "Animals";
-            Intent intent = new Intent(MainActivity.this, Data.class);
+            Intent intent = new Intent(MainMenu.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
         });
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         tvNature.setOnClickListener(view ->
         {
             String str = "Nature";
-            Intent intent = new Intent(MainActivity.this, Data.class);
+            Intent intent = new Intent(MainMenu.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
         });
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         tvTechnology.setOnClickListener(view ->
         {
             String str = "Technology";
-            Intent intent = new Intent(MainActivity.this, Data.class);
+            Intent intent = new Intent(MainMenu.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
         });
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity
         tvHistory.setOnClickListener(view ->
         {
             String str = "History";
-            Intent intent = new Intent(MainActivity.this, Data.class);
+            Intent intent = new Intent(MainMenu.this, Data.class);
             intent.putExtra("message_key", str);
             startActivity(intent);
         });
