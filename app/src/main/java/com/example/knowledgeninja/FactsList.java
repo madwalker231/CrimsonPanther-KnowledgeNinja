@@ -24,7 +24,7 @@ public class FactsList  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_facts_list);
 
         editTextSearch = findViewById(R.id.editTextSearch);
         imageViewSearch = findViewById(R.id.imageViewSearch);
