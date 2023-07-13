@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="buttonCivilRights">#FFEB3B</color>
+    <color name="buttonWorldWar">#FFEB3B</color>
+    <color name="buttonAcientCivil">#FFEB3B</color>
+    <color name="buttonAncientCivil">#FFEB3B</color>
 </resources>
